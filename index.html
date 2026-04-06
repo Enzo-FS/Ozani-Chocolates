@@ -1,26 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozani Chocolates | Inicial</title>
-    <link rel="stylesheet" href="src.css">
+    <link rel="stylesheet" href="./src.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
     <header>
-        <h1>Ozani Chocolates</h1>
-        <h3>Páscoa 2026</h3>h3>
-        <p>Os melhores chocolates artesanais para a sua Páscoa!</p>
+        <div class="logo" onclick="navegar('home')">Ozani Chocolates</div>
+        <nav>
+            <a onclick="navegar('home')">Início</a>
+            <a onclick="navegar('catalogo')">Catálogo</a>
+            <a onclick="navegar('sobre')">Nossa História</a>
+        </nav>
     </header>
+
     <main>
-      <p>"Nós da Ozani Chocolates buscamos oferecer uma experência única aos nossos clientes! Fazemos tudo com amor e dedicação para que você possa aproveitar o melhor que o chocolate pode oferecer!"<p>
+        <section id="home" class="pagina ativa">
+            <div class="hero">
+                <h1>O Melhor Chocolate Caseiro!</h1>
+                <p>Nós da Ozani Chocolates buscamos oferecer uma experência única aos nossos clientes! Fazemos tudo com amor e dedicação para que você possa aproveitar o melhor que o chocolate pode oferecer!</p>
+                <button class="btn-principal" onclick="navegar('catalogo')">Conhecer produtos</button>
+            </div>
+            <div class="secao-conteudo">
+                <h2>Mais vendidos</h2>
+                <div class="grid-produtos">
+                    <div class="card-produto">
+                        <div class="produto-img"><img src="./assets/pao de mel 1.png" alt=""></div>
+                        <h3 class="produto-titulo">Pão de Mel</h3>
+                        <p>"O pão de mel encanta com seu aroma de especiarias, textura macia e cobertura irresistível de chocolate.Mais que um doce, é uma expressão de carinho e tradição que adoça momentos especiais."</p>
+                        <div class="produto-preco">R$ 9,99</div>
+                        <a href="https://api.whatsapp.com/send/?phone=5511972476843&text=Gostaria+De+Fala%20Sobre%20Os%20P%C3%A3es%20De%20Mel&type=phone_number&app_absent=0" target="_blank"><button class="btn-comprar">Comprar Agora</button></a>
+                    </div>
+                    <div class="card-produto">
+                        <div class="produto-img"></div>
+                        <h3 class="produto-titulo">Ovos de Páscoa</h3>
+                        <p>Os ovos de Páscoa encantam com sua doçura e textura irresistível, transformando cada pedaço em um momento especial. Seja ao leite, meio amargo ou recheado, seu sabor desperta alegria e tradição. Mais do que chocolate, são símbolos de carinho e celebração.</p>
+                        <div class="produto-preco">Conheça nossa coleção!</div>
+                        <button class="btn-comprar" >Comprar Agora</button>
+                    </div>
+                    <div class="card-produto">
+                        <div class="produto-img"><img src="./assets/Group 1.png" alt=""></div>
+                        <h3 class="produto-titulo">Bombons</h3>
+                        <p>Os bombons de chocolate conquistam com sua casquinha delicada e recheios irresistíveis que surpreendem a cada mordida. Mais que um doce, são pequenos gestos de carinho que transformam qualquer momento em pura doçura.</p>
+                        <div class="produto-preco">R$ 44,99</div>
+                        <button class="btn-comprar" >Comprar Agora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="pagina">
+            <div class="secao-conteudo">
+                <h2>Nosso Catálogo Completo</h2>
+                <div class="grid-produtos">
+                    <div class="card-produto"><div class="produto-img">🍬</div><h3 class="produto-titulo">Trufas Clássicas Suíças</h3><div class="produto-preco">R$ 89,90</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Trufas Clássicas Suíças', 89.90)">Comprar</button></div>
+                    <div class="card-produto"><div class="produto-img">🍫</div><h3 class="produto-titulo">Língua de Gato Premium</h3><div class="produto-preco">R$ 64,50</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Língua de Gato Premium', 64.50)">Comprar</button></div>
+                    <div class="card-produto"><div class="produto-img">🎁</div><h3 class="produto-titulo">Caixa Desejo e Paixão</h3><div class="produto-preco">R$ 45,90</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Caixa Desejo e Paixão', 45.90)">Comprar</button></div>
+                    
+                    <div class="card-produto"><div class="produto-img">🌰</div><h3 class="produto-titulo">Tablete Avelã e Cacau 70%</h3><p>Intensidade e crocância.</p><div class="produto-preco">R$ 32,90</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Tablete Avelã 70%', 32.90)">Comprar</button></div>
+                    <div class="card-produto"><div class="produto-img">☕</div><h3 class="produto-titulo">Grãos de Café Cobertos</h3><p>Energia em pequenas mordidas.</p><div class="produto-preco">R$ 38,00</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Grãos de Café', 38.00)">Comprar</button></div>
+                    <div class="card-produto"><div class="produto-img">🍓</div><h3 class="produto-titulo">Pedaços de Morango ao Leite</h3><p>O frescor da fruta com chocolate.</p><div class="produto-preco">R$ 42,50</div><button class="btn-comprar" onclick="adicionarAoCarrinho('Morango ao Leite', 42.50)">Comprar</button></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="pagina">
+            <div class="secao-conteudo">
+                <h2>Nossa História</h2>
+                <div class="texto-sobre">
+                    <p>A <strong>ChocoLuxe</strong> nasceu de um sonho audacioso: unir a precisão e a suavidade milenar dos chocolates suíços com a vibração, alegria e intensidade dos ingredientes brasileiros.</p>
+                    <p>Nossos fundadores viajaram de Zurique até as fazendas de cacau na Bahia para entender como criar uma receita que agradasse tanto aos paladares que buscam o luxo clássico, quanto àqueles que amam a energia de presentear em datas especiais.</p>
+                    <p>Hoje, usamos o rigor europeu em nosso processo de temperagem, o cuidado afetuoso das boutiques tradicionais e a acessibilidade de uma marca moderna para entregar a você, simplesmente, o melhor do chocolate.</p>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
+
     <footer>
-a
+        <p>&copy; 2026 Ozani Chocolates. O amor que transforma o sabor!</p>
     </footer>
 
+    <script>
+        // Array para guardar os produtos do carrinho
+        let itensCarrinho = [];
 
+        // --- SISTEMA DE NAVEGAÇÃO (SPA) ---
+        function navegar(idPagina) {
+            // Esconde todas as páginas
+            const paginas = document.querySelectorAll('.pagina');
+            paginas.forEach(pagina => pagina.classList.remove('ativa'));
+            
+            // Mostra a página solicitada
+            document.getElementById(idPagina).classList.add('ativa');
+
+            // Se for a página do carrinho, renderiza os itens atualizados
+            if(idPagina === 'carrinho') {
+                atualizarTelaCarrinho();
+            }
+            
+            // Rola a página para o topo
+            window.scrollTo(0, 0);
+        }
+
+        // --- SISTEMA DE CARRINHO DE COMPRAS ---
+        function adicionarAoCarrinho(nome, preco) {
+            // Adiciona o objeto no array
+            itensCarrinho.push({ nome: nome, preco: preco });
+            
+            // Atualiza o contador visual do cabeçalho
+            document.getElementById('contador-carrinho').innerText = itensCarrinho.length;
+            
+            // Feedback visual e sonoro (alerta simples)
+            alert(`${nome} foi adicionado à sua sacola!`);
+            
+            // Efeito de pulo no ícone
+            const icone = document.querySelector('.carrinho-icon');
+            icone.style.transform = 'scale(1.3)';
+            setTimeout(() => { icone.style.transform = 'scale(1)'; }, 200);
+        }
+
+        function atualizarTelaCarrinho() {
+            const containerItens = document.getElementById('itens-do-carrinho');
+            const elementoTotal = document.getElementById('valor-total');
+            
+            // Limpa o HTML atual
+            containerItens.innerHTML = '';
+            let valorTotal = 0;
+
+            if (itensCarrinho.length === 0) {
+                containerItens.innerHTML = '<p id="msg-carrinho-vazio">Sua sacola está vazia no momento.</p>';
+                elementoTotal.innerText = '0,00';
+                return;
+            }
+
+            // Cria o HTML para cada item do carrinho
+            itensCarrinho.forEach((item, index) => {
+                valorTotal += item.preco;
+                
+                const divItem = document.createElement('div');
+                divItem.className = 'item-carrinho';
+                divItem.innerHTML = `
+                    <span>${item.nome}</span>
+                    <span>R$ ${item.preco.toFixed(2).replace('.', ',')}</span>
+                `;
+                containerItens.appendChild(divItem);
+            });
+
+            // Atualiza o texto do valor total
+            elementoTotal.innerText = valorTotal.toFixed(2).replace('.', ',');
+        }
+
+        function finalizarCompra() {
+            if (itensCarrinho.length === 0) {
+                alert("Sua sacola está vazia. Adicione alguns chocolates maravilhosos primeiro!");
+            } else {
+                alert("Pedido realizado com sucesso! O luxo em forma de chocolate está a caminho.");
+                // Limpa o carrinho após a compra
+                itensCarrinho = [];
+                document.getElementById('contador-carrinho').innerText = 0;
+                atualizarTelaCarrinho();
+                navegar('home');
+            }
+        }
+    </script>
 </body>
 </html>
